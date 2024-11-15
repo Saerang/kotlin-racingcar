@@ -28,7 +28,7 @@ class CalculatorKtTest {
 
     @Test
     fun `입력 값이 비어있으면 에외를 발생한다`() {
-        assertThatThrownBy { Calculator.calculate("") }
+        assertThatThrownBy { Calculator.calculate(" ") }
             .isInstanceOf(IllegalArgumentException::class.java).hasMessage("input values cannot be null or empty.")
     }
 
@@ -37,4 +37,11 @@ class CalculatorKtTest {
         assertThatThrownBy { Calculator.calculate("1 + 3 / 0") }
             .isInstanceOf(IllegalArgumentException::class.java).hasMessage("cannot divide by zero.")
     }
+
+    @Test
+    fun `홀수 번 째 숫자가 아니면 예외가 발생한다 `() {
+        assertThatThrownBy { Calculator.calculate("1 + & 3 / 0") }
+            .isInstanceOf(NumberFormatException::class.java)
+    }
+
 }
