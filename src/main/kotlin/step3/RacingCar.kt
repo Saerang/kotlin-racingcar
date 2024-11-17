@@ -6,12 +6,12 @@ import step3.util.DefaultNumberGenerator
 
 fun main() {
     println("자동차 대수는 몇 대인가요?")
-    val count: Int = readLine()!!.toInt()
+    val count: Int = readln().toInt()
     println("시도할 횟수는 몇 회인가요?")
-    val round = readLine()!!.toInt()
+    val round: Int = readln().toInt()
 
     val cars = Cars(count)
-    for (i in 0 until round) {
+    repeat(round) {
         cars.race(DefaultNumberGenerator())
         gameResult(cars.positions())
     }
