@@ -7,12 +7,6 @@ private const val MOVE_POSITION_CONDITION = 4
 private const val POSITION_VIEW = "-"
 
 data class Position(var position: Int) {
-    companion object {
-        fun init(): Position {
-            return Position(DEFAULT_NUMBER)
-        }
-    }
-
     fun move(number: Int) {
         if (number < 0 || number > 9) {
             throw IllegalArgumentException("Only numbers between 0 and 9 can be entered. input number:$number")
@@ -25,5 +19,11 @@ data class Position(var position: Int) {
 
     fun viewPosition(): String {
         return POSITION_VIEW.repeat(max(DEFAULT_NUMBER, position))
+    }
+
+    companion object {
+        fun init(): Position {
+            return Position(DEFAULT_NUMBER)
+        }
     }
 }
