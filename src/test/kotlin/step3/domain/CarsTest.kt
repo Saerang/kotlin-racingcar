@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test
 import step3.TestNumberGenerator
 
 class CarsTest {
-
     @Test
     fun `자동차들을 생성한다`() {
         val cars = Cars(3)
@@ -29,5 +28,4 @@ class CarsTest {
 
         assertThat(cars.positions()).isEqualTo(listOf(Position(0), Position(0), Position(0)))
     }
-
 }

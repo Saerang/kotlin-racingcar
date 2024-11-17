@@ -4,7 +4,6 @@ import step3.domain.Cars
 import step3.domain.Position
 import step3.util.DefaultNumberGenerator
 
-
 fun main() {
     println("자동차 대수는 몇 대인가요?")
     val count: Int = readLine()!!.toInt()

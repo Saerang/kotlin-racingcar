@@ -1,7 +1,6 @@
 package step3.domain
 
-
-class Car (private val position: Position) {
+class Car(private val position: Position) {
     fun move(number: Int) {
         position.move(number)
     }

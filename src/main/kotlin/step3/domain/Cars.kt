@@ -2,7 +2,6 @@ package step3.domain
 
 import step3.util.NumberGenerator
 
-
 class Cars(users: Int) {
     private val cars: MutableList<Car> = ArrayList()
 

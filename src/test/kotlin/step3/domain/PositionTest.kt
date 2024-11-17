@@ -4,9 +4,7 @@ import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.jupiter.api.Test
 
-
 class PositionTest {
-
     @Test
     fun `위치이동 시 4보다 이상 인 경우 이동한다`() {
         val position = Position.init()
