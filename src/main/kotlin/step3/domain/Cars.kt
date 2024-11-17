@@ -3,13 +3,7 @@ package step3.domain
 import step3.util.NumberGenerator
 
 class Cars(userCount: Int) {
-    private val cars: MutableList<Car> = ArrayList()
-
-    init {
-        repeat(userCount) {
-            cars.add(Car.init())
-        }
-    }
+    private val cars: List<Car> = List(userCount) { Car.init() }
 
     fun race(generator: NumberGenerator) {
         for (car in cars) {
