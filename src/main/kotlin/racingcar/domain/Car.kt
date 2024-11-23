@@ -1,6 +1,6 @@
 package racingcar.domain
 
-class Car(private var position: Position, private var username: String) {
+class Car(private var position: Position, private val username: String) {
     fun move(number: Int) {
         this.position = position.move(number)
     }
