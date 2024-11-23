@@ -24,4 +24,8 @@ class Cars(usernames: String) {
         }
         return positions
     }
+
+    fun cars(): List<Car> {
+        return cars
+    }
 }

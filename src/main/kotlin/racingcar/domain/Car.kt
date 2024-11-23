@@ -6,7 +6,11 @@ class Car(private var position: Position, private var username: String) {
     }
 
     fun position(): Position {
-        return position
+        return this.position
+    }
+
+    fun username(): String {
+        return this.username
     }
 
     companion object {

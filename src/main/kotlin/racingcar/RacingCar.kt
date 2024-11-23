@@ -1,7 +1,6 @@
 package racingcar
 
 import racingcar.domain.Cars
-import racingcar.domain.Position
 import racingcar.util.DefaultNumberGenerator
 
 fun main() {
@@ -13,13 +12,13 @@ fun main() {
     val cars = Cars(usernames)
     repeat(round) {
         cars.race(DefaultNumberGenerator())
-        gameResult(cars.positions())
+        gameResult(cars)
     }
 }
 
-fun gameResult(positions: List<Position>) {
-    positions.forEach { position ->
-        println(position.viewPosition())
+fun gameResult(cars: Cars) {
+    cars.cars().forEach {
+        println(it.username() + " : " + it.position().viewPosition())
     }
     println()
 }
