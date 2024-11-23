@@ -7,7 +7,7 @@ class Cars(userCount: Int) {
 
     fun race(generator: NumberGenerator) {
         for (car in cars) {
-            val number = generator.generator()
+            val number = generator.generate()
             car.move(number)
         }
     }
