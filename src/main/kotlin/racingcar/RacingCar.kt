@@ -1,8 +1,8 @@
-package step3
+package racingcar
 
-import step3.domain.Cars
-import step3.domain.Position
-import step3.util.DefaultNumberGenerator
+import racingcar.domain.Cars
+import racingcar.domain.Position
+import racingcar.util.DefaultNumberGenerator
 
 fun main() {
     println("자동차 대수는 몇 대인가요?")

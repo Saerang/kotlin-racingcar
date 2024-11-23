@@ -1,6 +1,6 @@
-package step3.domain
+package racingcar.domain
 
-import step3.util.NumberGenerator
+import racingcar.util.NumberGenerator
 
 class Cars(userCount: Int) {
     private val cars: List<Car> = List(userCount) { Car.init() }

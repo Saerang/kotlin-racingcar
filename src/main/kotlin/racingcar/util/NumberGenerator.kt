@@ -1,4 +1,4 @@
-package step3.util
+package racingcar.util
 
 interface NumberGenerator {
     fun generate(): Int

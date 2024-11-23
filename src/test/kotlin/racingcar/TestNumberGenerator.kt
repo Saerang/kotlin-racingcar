@@ -1,6 +1,6 @@
-package step3
+package racingcar
 
-import step3.util.NumberGenerator
+import racingcar.util.NumberGenerator
 
 class TestNumberGenerator(private val number: Int) : NumberGenerator {
     override fun generate(): Int {
