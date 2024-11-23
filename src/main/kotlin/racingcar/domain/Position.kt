@@ -27,6 +27,10 @@ value class Position(private val position: Int) {
         return POSITION_VIEW.repeat(max(DEFAULT_NUMBER, position))
     }
 
+    fun position(): Int {
+        return this.position
+    }
+
     companion object {
         fun init(): Position {
             return Position(DEFAULT_NUMBER)
