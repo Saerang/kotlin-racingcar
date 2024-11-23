@@ -9,7 +9,7 @@ class CarTest {
     @ParameterizedTest
     @ValueSource(ints = [4, 5, 6, 7, 8, 9])
     fun `자동차는 4이상의 숫자일 때 이동한다`(number: Int) {
-        val car = Car.init()
+        val car = Car.init("pobi,crong,honux")
 
         car.move(number)
 
@@ -19,7 +19,7 @@ class CarTest {
     @ParameterizedTest
     @ValueSource(ints = [0, 1, 2, 3])
     fun `자동차는 4미만의 숫자일 때 이동하지 않는다`(number: Int) {
-        val car = Car.init()
+        val car = Car.init("pobi,crong,honux")
 
         car.move(number)
 
@@ -29,7 +29,7 @@ class CarTest {
     @ParameterizedTest
     @ValueSource(ints = [-2, -1, 10, 11])
     fun `자동차는 0미만 혹은 9초과의 숫자일 때 에러가 발생한다`(number: Int) {
-        val car = Car.init()
+        val car = Car.init("pobi,crong,honux")
 
         assertThatThrownBy {
             car.move(number)
