@@ -19,14 +19,14 @@ fun main() {
     gameWinner(cars)
 }
 
-fun gameResult(cars: Cars) {
+private fun gameResult(cars: Cars) {
     cars.cars().forEach {
         println(it.username() + " : " + it.position().viewPosition())
     }
     println()
 }
 
-fun gameWinner(cars: Cars) {
+private fun gameWinner(cars: Cars) {
     val winners = Winners(cars)
     val winnersName = winners.getWinners().joinToString(",")
     println(winnersName + "가 최종 우승했습니다.")
