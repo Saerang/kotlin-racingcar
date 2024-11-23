@@ -2,9 +2,9 @@ package racingcar.domain
 
 import racingcar.util.NumberGenerator
 
-class Cars(private var cars: List<Car>) {
-    constructor(usernames: String) : this(usernames.split(",").map { username -> Car.init(username) })
+private const val USERNAME_SPLIT_CONDITION = ","
 
+class Cars(private var cars: List<Car>) {
     fun race(generator: NumberGenerator) {
         for (car in cars) {
             val number = generator.generate()
@@ -22,5 +22,11 @@ class Cars(private var cars: List<Car>) {
 
     fun cars(): List<Car> {
         return cars
+    }
+
+    companion object {
+        fun usernames(usernames: String): Cars {
+            return Cars(usernames.split(USERNAME_SPLIT_CONDITION).map { username -> Car.init(username) })
+        }
     }
 }

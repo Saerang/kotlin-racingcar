@@ -10,7 +10,7 @@ fun main() {
     println("시도할 횟수는 몇 회인가요?")
     val round: Int = readln().toInt()
 
-    val cars = Cars(usernames)
+    val cars = Cars.usernames(usernames)
     repeat(round) {
         cars.race(DefaultNumberGenerator())
         gameResult(cars)
