@@ -4,7 +4,7 @@ import racingcar.util.NumberGenerator
 
 private const val USERNAME_SPLIT_CONDITION = ","
 
-class Cars(private var cars: List<Car>) {
+class Cars(private val cars: List<Car>) {
     fun race(generator: NumberGenerator) {
         for (car in cars) {
             val number = generator.generate()
