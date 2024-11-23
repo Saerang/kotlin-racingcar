@@ -1,6 +1,7 @@
 package racingcar
 
 import racingcar.domain.Cars
+import racingcar.domain.Winners
 import racingcar.util.DefaultNumberGenerator
 
 fun main() {
@@ -14,6 +15,8 @@ fun main() {
         cars.race(DefaultNumberGenerator())
         gameResult(cars)
     }
+
+    gameWinner(cars)
 }
 
 fun gameResult(cars: Cars) {
@@ -21,4 +24,10 @@ fun gameResult(cars: Cars) {
         println(it.username() + " : " + it.position().viewPosition())
     }
     println()
+}
+
+fun gameWinner(cars: Cars) {
+    val winners = Winners(cars)
+    val winnersName = winners.getWinners().joinToString(",")
+    println(winnersName + "가 최종 우승했습니다.")
 }
