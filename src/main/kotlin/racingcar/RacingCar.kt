@@ -2,7 +2,7 @@ package racingcar
 
 import racingcar.domain.Cars
 import racingcar.domain.Winners
-import racingcar.util.DefaultNumberGenerator
+import racingcar.util.RandomNumberGenerator
 
 fun main() {
     println("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).")
@@ -12,7 +12,7 @@ fun main() {
 
     val cars = Cars.usernames(usernames)
     repeat(round) {
-        cars.race(DefaultNumberGenerator())
+        cars.race(RandomNumberGenerator())
         gameResult(cars)
     }
 
