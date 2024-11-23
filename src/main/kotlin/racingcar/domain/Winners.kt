@@ -12,7 +12,7 @@ class Winners(cars: Cars) {
                 .map { it }
     }
 
-    fun getWinners(): List<String> {
+    fun getWinnerNames(): List<String> {
         return winners.map { it.username() }
     }
 }

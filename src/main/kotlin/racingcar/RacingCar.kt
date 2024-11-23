@@ -28,6 +28,6 @@ private fun gameResult(cars: Cars) {
 
 private fun gameWinner(cars: Cars) {
     val winners = Winners(cars)
-    val winnersName = winners.getWinners().joinToString(",")
+    val winnersName = winners.getWinnerNames().joinToString(",")
     println(winnersName + "가 최종 우승했습니다.")
 }

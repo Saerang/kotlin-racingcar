@@ -17,7 +17,7 @@ class WinnersTest {
 
         val winners = Winners(cars)
 
-        assertThat(winners.getWinners()).hasSize(1).containsExactly("honux")
+        assertThat(winners.getWinnerNames()).hasSize(1).containsExactly("honux")
     }
 
     @Test
@@ -33,6 +33,6 @@ class WinnersTest {
 
         val winners = Winners(cars)
 
-        assertThat(winners.getWinners()).hasSize(2).containsExactly("crong", "honux")
+        assertThat(winners.getWinnerNames()).hasSize(2).containsExactly("crong", "honux")
     }
 }
