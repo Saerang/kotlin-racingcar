@@ -1,4 +1,4 @@
-package step3.domain
+package racingcar.domain
 
 import kotlin.math.max
 
@@ -25,6 +25,10 @@ value class Position(private val position: Int) {
 
     fun viewPosition(): String {
         return POSITION_VIEW.repeat(max(DEFAULT_NUMBER, position))
+    }
+
+    fun position(): Int {
+        return this.position
     }
 
     companion object {

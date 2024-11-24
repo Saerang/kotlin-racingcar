@@ -1,19 +1,19 @@
-package step3.domain
+package racingcar.domain
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import step3.TestNumberGenerator
+import racingcar.TestNumberGenerator
 
 class CarsTest {
     @Test
     fun `자동차들을 생성한다`() {
-        val cars = Cars(3)
+        val cars = Cars.usernames("pobi,crong,honux")
         assertThat(cars).isNotNull()
     }
 
     @Test
     fun `자동차 경주 시 4이상의 숫자는 전진한다`() {
-        val cars = Cars(3)
+        val cars = Cars.usernames("pobi,crong,honux")
 
         cars.race(TestNumberGenerator(4))
 
@@ -22,7 +22,7 @@ class CarsTest {
 
     @Test
     fun `자동차 경주 시작 시 4미만의 숫자는 멈춰 있는다`() {
-        val cars = Cars(3)
+        val cars = Cars.usernames("pobi,crong,honux")
 
         cars.race(TestNumberGenerator(3))
 
