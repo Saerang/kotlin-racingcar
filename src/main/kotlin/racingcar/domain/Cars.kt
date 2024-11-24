@@ -4,7 +4,7 @@ import racingcar.util.NumberGenerator
 
 private const val USERNAME_SPLIT_CONDITION = ","
 
-class Cars(private val cars: List<Car>) {
+class Cars(val cars: List<Car>) {
     fun race(generator: NumberGenerator) {
         for (car in cars) {
             val number = generator.generate()
@@ -15,7 +15,7 @@ class Cars(private val cars: List<Car>) {
     fun positions(): List<Position> {
         val positions: MutableList<Position> = ArrayList()
         for (car in cars) {
-            positions.add(car.position())
+            positions.add(car.position)
         }
         return positions
     }
