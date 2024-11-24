@@ -5,9 +5,9 @@ class Winners(cars: Cars) {
 
     init {
         val highestPosition: Position =
-            cars.positions().maxByOrNull { it.position() } ?: Position.init()
+            cars.positions().maxByOrNull { it.position } ?: Position.init()
         winners =
-            cars.cars()
+            cars.cars
                 .filter { it.position == highestPosition }
                 .map { it }
     }

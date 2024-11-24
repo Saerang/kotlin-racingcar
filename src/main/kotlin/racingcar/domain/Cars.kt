@@ -20,10 +20,6 @@ class Cars(val cars: List<Car>) {
         return positions
     }
 
-    fun cars(): List<Car> {
-        return cars
-    }
-
     companion object {
         fun usernames(usernames: String): Cars {
             return Cars(usernames.split(USERNAME_SPLIT_CONDITION).map { username -> Car.init(username) })
