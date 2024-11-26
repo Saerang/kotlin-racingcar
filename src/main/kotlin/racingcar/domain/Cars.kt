@@ -13,11 +13,7 @@ class Cars(val cars: List<Car>) {
     }
 
     fun positions(): List<Position> {
-        val positions: MutableList<Position> = ArrayList()
-        for (car in cars) {
-            positions.add(car.position)
-        }
-        return positions
+        return cars.map { it.position }
     }
 
     companion object {
