@@ -21,7 +21,7 @@ class Cars(val cars: List<Car>) {
     }
 
     companion object {
-        fun usernames(usernames: String): Cars {
+        fun from(usernames: String): Cars {
             return Cars(usernames.split(USERNAME_SPLIT_CONDITION).map { username -> Car.init(username) })
         }
     }

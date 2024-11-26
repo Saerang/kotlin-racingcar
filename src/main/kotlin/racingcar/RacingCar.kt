@@ -9,7 +9,7 @@ fun main() {
     val usernames = InputView.carNames()
     val round = InputView.roundCount()
 
-    val cars = Cars.usernames(usernames)
+    val cars = Cars.from(usernames)
     repeat(round) {
         cars.race(RandomNumberGenerator())
         OutputView.gameResult(cars)
