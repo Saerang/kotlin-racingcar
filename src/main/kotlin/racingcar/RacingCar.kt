@@ -11,7 +11,7 @@ fun main() {
 
     val cars = Cars.from(usernames)
     repeat(round) {
-        cars.race(RandomNumberGenerator())
+        cars.race(RandomNumberGenerator)
         OutputView.gameResult(cars)
     }
 
