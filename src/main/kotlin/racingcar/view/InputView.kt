@@ -8,6 +8,6 @@ object InputView {
 
     fun roundCount(): Int {
         println("시도할 횟수는 몇 회인가요?")
-        return readln().toInt()
+        return readln().toIntOrNull() ?: throw IllegalArgumentException("숫자를 입력해 주세요.")
     }
 }
